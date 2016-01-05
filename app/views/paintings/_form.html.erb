@@ -1,0 +1,31 @@
+<%= flash[:error] %>
+<%=  form_for @painting do |f| %>
+  <fieldset>
+    <div>
+      <%=  f.label :title %>
+      <%=  f.text_field :title %>
+    </div>
+    <div>
+      <%=  f.label :year %>
+      <%=  f.text_area :year %>
+    </div>
+    <div>
+      <%=  f.label :style %>
+      <%=  f.text_field :style %>
+    </div>
+    <div>
+      <%=  f.label :image %>
+      <%=  f.text_field :image %>
+    </div>
+    <div>
+      <%=  f.label :artist_id %>
+      <%=  f.text_field :artist_id %>
+    </div>
+    <div>
+      <%=  f.label :gallery_id %>
+      <%=  f.text_field :gallery_id %>
+    </div>
+  </fieldset>
+  <%=  f.submit "Submit" %>
+  <%= link_to 'Back', painting_path %>
+<% end %>

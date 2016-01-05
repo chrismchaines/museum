@@ -1,0 +1,15 @@
+<%= flash[:error] %>
+<%=  form_for @gallery do |f| %>
+  <fieldset>
+    <div>
+      <%=  f.label :name %>
+      <%=  f.text_field :name %>
+    </div>
+    <div>
+      <%=  f.label :city %>
+      <%=  f.text_area :city %>
+    </div>
+  </fieldset>
+  <%=  f.submit "Submit" %>
+  <%= link_to 'Back', gallery_path %>
+<% end %>

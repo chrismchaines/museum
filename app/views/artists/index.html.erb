@@ -1,0 +1,14 @@
+<h1>Check out all the artists in the database</h1>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <li>
+      <%= link_to artist.name, artist_path(artist) %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Full Paintings List", paintings_path %>
+<br>
+<%= link_to "Add New Artist", new_artist_path %>

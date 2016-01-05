@@ -1,0 +1,15 @@
+<h1><%= @painting.title %></h1>
+<h3>Painted by: <%= link_to @painting.artist.name, @painting.artist %>,
+	<%= @painting.year %>
+</h3>
+<p>Style: <%= @painting.style %></p>
+
+<div>
+  <%= image_tag @painting.image %>
+</div>
+
+<p>Currently on display at <%= link_to @painting.gallery.name, @painting.gallery %></p>
+
+
+<%= link_to "Full Paintings List", paintings_path %>
+<br>

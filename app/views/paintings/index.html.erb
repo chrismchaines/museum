@@ -1,0 +1,20 @@
+<h1>Welcome to The Most Wonderful Paintings Database in the World</h1>
+<h3>See the best paintings of yesterday and today:</h3>
+
+<br>
+
+
+<%= render 'search' %>
+
+
+<%= link_to "Add New Painting", new_painting_path %>
+<ul>
+  <% @paintings.each do |painting| %>
+    <li>
+      <%= link_to painting.title, painting_path(painting) %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "See All Artists", artists_path %>
+<br>
+<%= link_to "See All Galleries", galleries_path %>

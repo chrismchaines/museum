@@ -1,0 +1,23 @@
+<%= flash[:error] %>
+<%=  form_for @artist do |f| %>
+  <fieldset>
+    <div>
+      <%=  f.label :name %>
+      <%=  f.text_field :name %>
+    </div>
+    <div>
+      <%=  f.label :nationality %>
+      <%=  f.text_area :nationality %>
+    </div>
+    <div>
+      <%=  f.label :dob %>
+      <%=  f.text_field :dob %>
+    </div>
+    <div>
+      <%=  f.label :image %>
+      <%=  f.text_field :image %>
+    </div>
+  </fieldset>
+  <%=  f.submit "Submit" %>
+  <%= link_to 'Back', artist_path %>
+<% end %>
